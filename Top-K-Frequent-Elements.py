@@ -5,14 +5,12 @@
 5        :type k: int
 6        :rtype: List[int]
 7        """
-8        number_hash={}
+8        nums_hash={}
 9        for num in nums:
-10            if num in number_hash:
-11                number_hash[num]+=1
+10            if num in nums_hash:
+11                nums_hash[num]+=1
 12            else:
-13                number_hash[num]=1
-14        print(number_hash)
-15        final_list=sorted(number_hash,key=number_hash.get,reverse=True)
-16        print(final_list)
-17        return final_list[:k]
-18
+13                nums_hash[num]=1
+14        return sorted(nums_hash,key=nums_hash.get,reverse=True)[:k]
+15
+16
